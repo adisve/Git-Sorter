@@ -21,7 +21,7 @@ create_and_move() {
     done
 }
 
-echo "This program will move any and all folders containing a .git file"
+echo "This program will move any and all folders containing a .git file from the folder you specify"
 echo "It is therefore not a good idea to run it as root, so make sure you aren't,"
 echo "unless you know what you're doing."
 
