@@ -3,11 +3,15 @@ git_dir=$HOME/Development
 
 create_and_move() {
     mkdir -p $git_dir
+    
+    read -p "Which path should be searched?: "  -n 1 -r
+    INPUT_PATH=$REPLY
+    
     git_files=()
     echo "Looking for folders and files . . ."
     while IFS= read -d $'\0' -r file ; do
         git_files=("${git_files[@]}" "$file")
-    done < <(find $HOME -type d -name ".git" -print0 2>/dev/null)
+    done < <(find $INPUT_PATH -type d -name ".git" -print0 2>/dev/null)
     echo "Found ${#git_files[@]} folders"
 
     echo "Relocating folders and files . . ."
