@@ -17,6 +17,14 @@ create_and_move() {
     done
 }
 
-create_and_move
-echo "Finished moving git folders into ${git_dir}"
+echo "This program will move any and all folders containing a .git file"
+echo "It is therefore not a good idea to run it as root, so make sure you aren't,"
+echo "unless you know what you're doing."
+
+read -p "Would you like to reallocate your git folders into $git_dir? (Y/N): " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    create_and_move
+    echo "Finished moving git folders into ${git_dir}"
+fi
 exit 1
