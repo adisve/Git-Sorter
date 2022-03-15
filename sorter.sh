@@ -1,5 +1,5 @@
 #!/bin/bash
-git_dir=$HOME/GitRepositories
+git_dir=$HOME/Development
 
 create_and_move() {
     mkdir -p $git_dir
