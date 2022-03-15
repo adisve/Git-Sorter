@@ -4,5 +4,5 @@ Simple shell script that sorts git folders into common directory. Currently it i
 ## Usage
 
   * git clone https://github.com/adisve/Git-Sorter.git
-  * cd Git-Sorter
+  * cd Git-Sorter/
   * ./sorter.sh
