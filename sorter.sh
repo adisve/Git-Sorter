@@ -3,10 +3,10 @@ git_dir=$HOME/Development
 
 create_and_move() {
     mkdir -p $git_dir
-    
-    read -p "Which path should be searched?: "  -n 1 -r
+
+    read -p "Which path should be searched?: "
     INPUT_PATH=$REPLY
-    
+
     git_files=()
     echo "Looking for folders and files . . ."
     while IFS= read -d $'\0' -r file ; do
